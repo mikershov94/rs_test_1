@@ -32,5 +32,9 @@
     "webpack-cli": "*",
     "webpack-dev-server": "*",
     "webpack-merge": "*"
+  },
+  "dependencies": {
+    "react": "*",
+    "react-dom": "*"
   }
 }
