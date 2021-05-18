@@ -70,6 +70,7 @@ module.exports = {
             {
                 test: /\.(js|jsx)$/,
                 loader: 'babel-loader',
+                options: { generatorOpts: { compact: false } },
                 exclude: '/node-modules/'
             },
 
@@ -96,6 +97,10 @@ module.exports = {
                 ]
             }
         ],
+    },
+
+    resolve: {
+        extensions: ['.js', '.jsx']
     },
 
     plugins: [
