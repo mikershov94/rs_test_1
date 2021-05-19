@@ -11,7 +11,7 @@ module.exports = {
 
     entry: {
         app: [
-            './src/index.js'
+            './src/index.ts'
         ]
     },
     output: {
@@ -95,12 +95,18 @@ module.exports = {
                         options: { name: '[path][name].[ext]' }
                     }
                 ]
+            },
+
+            {
+                test: /\.tsx?$/,
+                use: 'ts-loader',
+                exclude: '/node-modules/'
             }
         ],
     },
 
     resolve: {
-        extensions: ['.js', '.jsx']
+        extensions: ['.js', '.jsx', '.ts', '.tsx']
     },
 
     plugins: [
