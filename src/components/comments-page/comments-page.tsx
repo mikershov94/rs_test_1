@@ -1,12 +1,11 @@
 import React from 'react';
 import './comments-page.sass';
+import Form from '../form';
 
 const CommentsPage = () => {
     return(
         <div className="comments-page">
-            <div className="commetns-page__test-component">
-                <h1>Hello, world!</h1>
-            </div>
+            <Form />
         </div>
     );
 }
