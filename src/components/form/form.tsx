@@ -1,4 +1,5 @@
 import React from 'react';
+
 import './form.sass';
 
 type FormProps = {};
@@ -26,7 +27,8 @@ class Form extends React.Component<FormProps, FormState> {
                        type="text"
                        className="form__textfield"
                        placeholder="Введите сообщение" />
-                <button className="form__button">Отправить</button>
+                <button className="form__button"
+                        onClick={() => {}}>Отправить</button>
             </form>
         );
     }
