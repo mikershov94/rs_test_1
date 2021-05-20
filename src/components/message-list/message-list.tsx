@@ -1,14 +1,17 @@
 import React from 'react';
 import './message-list.sass';
 
-class MessageList extends React.Component {
-    render() {
-        return(
-            <div className="message-list">
-                
-            </div>
-        );
-    }
+const MessageList = (props: any) => {
+    const items = props.data.map((item: any) => {
+        const { id } = item;
+        return();
+    })
+
+    return(
+        <div className="message-list">
+        
+        </div>
+    );
 }
 
 export default MessageList
