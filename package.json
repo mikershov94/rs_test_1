@@ -27,6 +27,8 @@
     "mini-css-extract-plugin": "*",
     "path": "*",
     "postcss-loader": "*",
+    "react-redux": "*",
+    "redux": "*",
     "sass": "*",
     "sass-loader": "*",
     "style-loader": "*",
