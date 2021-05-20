@@ -3,18 +3,31 @@ import './form.sass';
 
 type FormProps = {};
 type FormState = {
-    text: string
+    readonly text: string
 };
 
 class Form extends React.Component<FormProps, FormState> {
+    state = {
+        text: ''
+    }
 
+    onTextfieldChange = (e: React.FormEvent<HTMLInputElement>) => {
+        this.setState({
+            text: e.currentTarget.value
+        })
+    }
 
     render() {
+        console.log(this.state.text);
+
         return(
-            <div className="form">
-                <input type="text" className="form__textfield" placeholder="Введите сообщение" />
+            <form className="form">
+                <input onChange={this.onTextfieldChange}
+                       type="text"
+                       className="form__textfield"
+                       placeholder="Введите сообщение" />
                 <button className="form__button">Отправить</button>
-            </div>
+            </form>
         );
     }
 }
