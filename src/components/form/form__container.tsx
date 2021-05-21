@@ -5,9 +5,7 @@ import { addMessageToList } from '../../actions';
 import Form from './form';
 
 const mapStateToProps = (state: any) => {
-    return {
-        messages: state.messages
-    }
+    return {}
 }
 
 const mapDispatchToProps = (dispatch: any) => {
@@ -19,8 +17,8 @@ const mapDispatchToProps = (dispatch: any) => {
 class FormContainer extends React.Component<{onAddMessage: any}, {}> {
 
     render() {
-
-        return <Form />
+        
+        return <Form onAddMessage={this.props.onAddMessage} />
     }
 }
 

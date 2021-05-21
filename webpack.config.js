@@ -11,7 +11,7 @@ module.exports = {
 
     entry: {
         app: [
-            './src/index.ts'
+            './src/index.tsx'
         ]
     },
     output: {

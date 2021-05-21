@@ -2,7 +2,9 @@ import React from 'react';
 
 import './form.sass';
 
-type FormProps = {};
+type FormProps = {
+    onAddMessage: any
+};
 type FormState = {
     readonly text: string
 };
@@ -19,7 +21,6 @@ class Form extends React.Component<FormProps, FormState> {
     }
 
     render() {
-        console.log(this.state.text);
 
         return(
             <form className="form">
@@ -28,7 +29,7 @@ class Form extends React.Component<FormProps, FormState> {
                        className="form__textfield"
                        placeholder="Введите сообщение" />
                 <button className="form__button"
-                        onClick={() => {}}>Отправить</button>
+                        onClick={this.props.onAddMessage}>Отправить</button>
             </form>
         );
     }
