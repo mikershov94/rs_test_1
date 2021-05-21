@@ -1,6 +1,7 @@
 const addMessage = (state: any, message: string) => {
-    const messages: Array<string> = state.mesages;
-    messages.push(message);
+    let messages: Array<string> = [];
+    messages.push(message)
+    console.log(messages)
 
     return { messages }
 }

@@ -20,16 +20,21 @@ class Form extends React.Component<FormProps, FormState> {
         })
     }
 
+    onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+        e.preventDefault();
+        this.props.onAddMessage(this.state.text);
+    }
+
     render() {
 
         return(
-            <form className="form">
+            <form className="form"
+                  onSubmit={this.onSubmit}>
                 <input onChange={this.onTextfieldChange}
                        type="text"
                        className="form__textfield"
                        placeholder="Введите сообщение" />
-                <button className="form__button"
-                        onClick={this.props.onAddMessage}>Отправить</button>
+                <button className="form__button">Отправить</button>
             </form>
         );
     }
