@@ -23,6 +23,9 @@ class Form extends React.Component<FormProps, FormState> {
     onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         this.props.onAddMessage(this.state.text);
+        this.setState({
+            text: ''
+        })
     }
 
     render() {
@@ -33,7 +36,8 @@ class Form extends React.Component<FormProps, FormState> {
                 <input onChange={this.onTextfieldChange}
                        type="text"
                        className="form__textfield"
-                       placeholder="Введите сообщение" />
+                       placeholder="Введите сообщение"
+                       value={this.state.text} />
                 <button className="form__button">Отправить</button>
             </form>
         );
