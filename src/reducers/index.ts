@@ -5,3 +5,5 @@ const reducer = (state: any, action: any) => {
         messages: updateMessageList(state, action)
     }
 }
+
+export default reducer;
