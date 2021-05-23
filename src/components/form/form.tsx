@@ -3,7 +3,7 @@ import React from 'react';
 import './form.sass';
 
 type FormProps = {
-    onAddMessage: any
+    onAddMessage: TAddMessageCreator
 };
 type FormState = {
     readonly text: string
@@ -22,7 +22,8 @@ class Form extends React.Component<FormProps, FormState> {
 
     onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
-        this.props.onAddMessage(this.state.text);
+        const messageId = Math.floor(Math.random() * 100)
+        this.props.onAddMessage({ id: messageId, text: this.state.text });
         this.setState({
             text: ''
         })

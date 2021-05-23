@@ -1,11 +1,13 @@
-const addMessage = (state: any, message: string) => {;
-    let messages: Array<string> = state.messages
+/// <reference path="../types.d.ts" />
+
+const addMessage = (state: TStateApp, message: TMessage) => {;
+    let messages: Array<TMessage> = state.messages
     messages.push(message)
     
     return messages;
 }
 
-const updateMessageList = (state: any, action: any) => {
+const updateMessageList = (state: TStateApp, action: TAddMessageAction) => {
     if (state === undefined) {
         return []
     }
