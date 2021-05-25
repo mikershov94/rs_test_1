@@ -2,7 +2,7 @@ import React from 'react';
 
 import './form.sass';
 
-class Form extends React.Component<any, TFormState> {
+class Form extends React.Component<TFormProps, TFormState> {
     state = {
         text: ''
     }

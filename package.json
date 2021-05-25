@@ -42,6 +42,7 @@
   },
   "dependencies": {
     "react": "*",
-    "react-dom": "*"
+    "react-dom": "*",
+    "react-swipeable": "^6.1.2"
   }
 }
