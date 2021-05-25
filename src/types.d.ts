@@ -14,20 +14,32 @@ type TAddMessageAction = {
 
 type TAddMessageCreator = (newMessage: TMessage) => TAddMessageAction
 
-type TFormContainerProps = {
-    onAddMessage: TAddMessageCreator
-}
-
 
 type TMessageListProps = {
-    messages?: Array<TMessage>
+    messages?: TMessage[]
 }
 
 type TMessageListState = {
-    messages: Array<TMessage>
+    messages?: TMessage[]
 }
 
 type TMessageListItemProps = {
     id?: number
     message?: TMessage
+}
+
+type TFormProps = {
+    onAddMessage: TAddMessageCreator
+};
+type TFormState = {
+    readonly text: string
+};
+
+type TCommentsPageProps = {
+    onAddMessage?: TAddMessageCreator,
+    messages?: TMessage[]
+}
+
+type TCommentsPageState = {
+    messages: TMessage[]
 }

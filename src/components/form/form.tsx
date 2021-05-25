@@ -2,14 +2,7 @@ import React from 'react';
 
 import './form.sass';
 
-type FormProps = {
-    onAddMessage: TAddMessageCreator
-};
-type FormState = {
-    readonly text: string
-};
-
-class Form extends React.Component<FormProps, FormState> {
+class Form extends React.Component<any, TFormState> {
     state = {
         text: ''
     }

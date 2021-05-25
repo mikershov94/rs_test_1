@@ -1,12 +1,10 @@
 import { updateMessageList } from './message-list';
 
-const defaultState = {
-    messages: [
-        {id: 9, text: 'орор'}
-    ]
+const initState: TStateApp = {
+    messages: []
 }
 
-const reducer = (state: TStateApp = defaultState, action: TAddMessageAction) => {
+const reducer = (state: TStateApp = initState, action: TAddMessageAction) => {
     return {
         messages: updateMessageList(state, action)
     }
