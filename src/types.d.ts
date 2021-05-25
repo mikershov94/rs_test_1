@@ -4,7 +4,8 @@ type TMessage = {
 }
 
 type TStateApp = {
-    messages: Array<TMessage>
+    messages: TMessage[],
+    time: Date
 }
 
 type TAddMessageAction = {

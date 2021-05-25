@@ -1,12 +1,14 @@
 import { updateMessageList } from './message-list';
 
 const initState: TStateApp = {
-    messages: []
+    messages: [],
+    time: new Date()
 }
 
 const reducer = (state: TStateApp = initState, action: TAddMessageAction) => {
     return {
-        messages: updateMessageList(state, action)
+        messages: updateMessageList(state, action),
+        time: updateTime(state, action)
     }
 }
 

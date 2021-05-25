@@ -5,6 +5,13 @@ const addMessageToList = (newMessage: TMessage) => {
     }
 }
 
+const updateTime = () => {
+    return {
+        type: 'UPDATE_TIME'
+    }
+}
+
 export {
-    addMessageToList
+    addMessageToList,
+    updateTime
 }
