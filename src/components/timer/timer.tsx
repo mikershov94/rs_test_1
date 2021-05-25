@@ -3,7 +3,7 @@ import './timer.sass';
 
 const Timer = () => {
     return(
-        <div className="timer">00:00:00</div>
+        <div className="timer">{new Date().toLocaleTimeString()}</div>
     );
 };
 
