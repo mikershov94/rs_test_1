@@ -18,6 +18,7 @@ type TUpdateTimeAction = {
 }
 
 type TAddMessageCreator = (newMessage: TMessage) => TAddMessageAction
+type TUpdateTimeCreator = () => TUpdateTimeAction
 
 
 type TMessageListProps = {
@@ -47,4 +48,9 @@ type TCommentsPageProps = {
 
 type TCommentsPageState = {
     messages: TMessage[]
+}
+
+type TTimerProps = {
+    time?: Date
+    updateTime?: TUpdateTimeCreator
 }

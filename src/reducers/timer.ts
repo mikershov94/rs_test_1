@@ -5,6 +5,7 @@ const updateTime = (state: TStateApp, action: TUpdateTimeAction) => {
 
     switch (action.type) {
         case 'UPDATE_TIME':
+            
             return new Date();
 
         default:

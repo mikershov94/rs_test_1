@@ -7,7 +7,7 @@ import TimerPage from '../timer-page';
 const App = () => {
     return (
         <div className="app-container">
-            <TimerPage />
+            <CommentsPage />
         </div>
     );
 }
