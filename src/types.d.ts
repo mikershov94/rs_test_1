@@ -13,6 +13,10 @@ type TAddMessageAction = {
     payload?: TMessage
 }
 
+type TUpdateTimeAction = {
+    type: string
+}
+
 type TAddMessageCreator = (newMessage: TMessage) => TAddMessageAction
 
 
